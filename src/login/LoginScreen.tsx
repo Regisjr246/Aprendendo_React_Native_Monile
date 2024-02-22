@@ -7,13 +7,21 @@ function LoginScreen(): JSX.Element {
             <Image style={styles.logo} resizeMode='contain' source={require('../assets/images/user.png')} />
             <View style={styles.card}>
                 <Text style={styles.title}>Login</Text>
-                <TextInput style={styles.input}placeholder="E-mail" placeholderTextColor={"#151413"}></TextInput>
+                <TextInput style={styles.input} placeholder="E-mail" placeholderTextColor={"#151413"}></TextInput>
                 <TextInput style={styles.input} placeholder="Senha" placeholderTextColor={"#151413"}></TextInput>
-          
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText} > Entrar</Text>
-          </TouchableOpacity>
-          
+
+                <TouchableOpacity style={styles.button}>
+                    <Text style={styles.buttonText} > Entrar</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity    >
+                    <Text style={styles.forgotPassword}>Esqueceu a senha?</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity >
+                    <Text  style={styles.forgotSingin}>Não possui conta? Cadastre-se!</Text>
+                </TouchableOpacity>
+
             </View>
         </View>
     );
@@ -45,37 +53,48 @@ const styles = StyleSheet.create({
         shadowRadius: 2,
     },
 
-    title:{
-        fontSize:25,
-        fontWeight:'bold',
+    title: {
+        fontSize: 25,
+        fontWeight: 'bold',
         color: '#151413',
-        marginBottom:20,
-        textAlign:'center',
+        marginBottom: 20,
+        textAlign: 'center',
     },
 
-input:{
-backgroundColor: '#D7D4D1',
-height:40,
-marginBottom:20,
-paddingHorizontal:10,
-borderRadius:8,
-borderWidth:1,
-borderColor:    '#F76900'
-},
+    input: {
+        backgroundColor: '#D7D4D1',
+        height: 40,
+        marginBottom: 20,
+        paddingHorizontal: 10,
+        borderRadius: 8,
+        borderWidth: 1,
+        borderColor: '#F76900'
+    },
 
 
-button:{
-    backgroundColor:'#836FFF',
-    height:40,
-    borderRadius:8
-},
+    button: {
+        backgroundColor: '#836FFF',
+        height: 40,
+        borderRadius: 8
+    },
 
-buttonText:{
-color:"#FFFFFF",
-textAlign:'center',
-fontSize:16,
-lineHeight:40
-}
+    buttonText: {
+        color: "#FFFFFF",
+        textAlign: 'center',
+        fontSize: 16,
+        lineHeight: 40
+    },
+
+    forgotPassword:{
+       color:'#836FFF',
+       textAlign:'center',
+       marginTop:10, 
+    },
+    forgotSingin:{
+        color:'#836FFF',
+        textAlign:'center',
+        marginTop:0, 
+    }
 
 
 
