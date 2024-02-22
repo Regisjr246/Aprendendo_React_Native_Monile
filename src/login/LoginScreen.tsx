@@ -1,16 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Image, StyleSheet, Text, TextInput, Touchable, TouchableOpacity, View } from 'react-native';
 
 function LoginScreen(): JSX.Element {
+
+const[email,setEmail]=useState("");
+const[passsord,setPassword]=useState("");
+
+
+
+
+
+function login(){
+    const dados={
+        email:email,
+        passsord:passsord,
+    }
+
+console.log(dados);
+
+}
+
+
+
+
+
     return (
         <View style={styles.container}>
             <Image style={styles.logo} resizeMode='contain' source={require('../assets/images/user.png')} />
             <View style={styles.card}>
                 <Text style={styles.title}>Login</Text>
-                <TextInput style={styles.input} placeholder="E-mail" placeholderTextColor={"#151413"}></TextInput>
-                <TextInput style={styles.input} placeholder="Senha" placeholderTextColor={"#151413"}></TextInput>
 
-                <TouchableOpacity style={styles.button}>
+                <TextInput style={styles.input} placeholder="E-mail" placeholderTextColor={"#151413"} onChangeText={(textEmail)=>setEmail(textEmail)}> </TextInput>
+               
+               <TextInput style={styles.input} placeholder="Senha" placeholderTextColor={"#151413"}  onChangeText={(textPassword)=>setPassword(textPassword)} secureTextEntry  ></TextInput>
+
+                <TouchableOpacity style={styles.button}  onPress={()=>{login() }}>
                     <Text style={styles.buttonText} > Entrar</Text>
                 </TouchableOpacity>
 
