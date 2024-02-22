@@ -3,15 +3,8 @@ import { Text, View } from "react-native";
 import LoginScreen from "./src/login/LoginScreen";
 
 function App(): JSX.Element {
-  return(
-
-    
-  <View>    
+  return(    
    <LoginScreen/>
-  </View>
-
-
-
     );    
 }
 
