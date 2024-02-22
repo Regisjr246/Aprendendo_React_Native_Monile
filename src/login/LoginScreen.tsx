@@ -5,7 +5,8 @@ import { StyleSheet, View } from "react-native";
 
 function LoginScreen(): JSX.Element{
     return (
-        <View>
+        <View style={styles.cotainer}>
+
 
         </View>
 
@@ -14,9 +15,9 @@ function LoginScreen(): JSX.Element{
 }
 
 
-const Styles= StyleSheet.create({
+const styles= StyleSheet.create({
 cotainer:{
- 
+
 }
 });
 
