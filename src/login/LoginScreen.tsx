@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Image, StyleSheet, Text, TextInput, Touchable, TouchableOpacity, View } from 'react-native';
 
 function LoginScreen(): JSX.Element {
     return (
@@ -7,8 +7,13 @@ function LoginScreen(): JSX.Element {
             <Image style={styles.logo} resizeMode='contain' source={require('../assets/images/user.png')} />
             <View style={styles.card}>
                 <Text style={styles.title}>Login</Text>
-                <TextInput placeholder="E-mail" placeholderTextColor={"#151413"}></TextInput>
-                <TextInput placeholder="Senha" placeholderTextColor={"#151413"}></TextInput>
+                <TextInput style={styles.input}placeholder="E-mail" placeholderTextColor={"#151413"}></TextInput>
+                <TextInput style={styles.input} placeholder="Senha" placeholderTextColor={"#151413"}></TextInput>
+          
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText} > Entrar</Text>
+          </TouchableOpacity>
+          
             </View>
         </View>
     );
@@ -46,7 +51,39 @@ const styles = StyleSheet.create({
         color: '#151413',
         marginBottom:20,
         textAlign:'center',
-    }
+    },
+
+input:{
+backgroundColor: '#D7D4D1',
+height:40,
+marginBottom:20,
+paddingHorizontal:10,
+borderRadius:8,
+borderWidth:1,
+borderColor:    '#F76900'
+},
+
+
+button:{
+    backgroundColor:'#836FFF',
+    height:40,
+    borderRadius:8
+},
+
+buttonText:{
+color:"#FFFFFF",
+textAlign:'center',
+fontSize:16,
+lineHeight:40
+}
+
+
+
+
+
+
+
+
 });
 
 export default LoginScreen;
